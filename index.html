@@ -22,7 +22,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%23ffffff' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
         }
         
         .grass {
@@ -44,7 +43,6 @@
             max-width: 500px;
             position: relative;
             box-shadow: 0 8px 0 #452103;
-            image-rendering: pixelated;
             transform: translateY(-30px);
             z-index: 10;
         }
@@ -72,7 +70,7 @@
             height: 100%;
         }
         
-        /* Farmer body parts - Cuter girl version */
+        /* Farmer body parts */
         .head {
             position: absolute;
             top: 60px;
@@ -102,22 +100,8 @@
             height: 12px;
             background-color: #452103;
             border-radius: 50%;
-            position: relative;
-            overflow: hidden;
         }
         
-        .eye::after {
-            content: '';
-            position: absolute;
-            top: 1px;
-            left: 1px;
-            width: 4px;
-            height: 4px;
-            background-color: white;
-            border-radius: 50%;
-        }
-        
-        /* Cuter Girl-specific styles */
         .hair {
             position: absolute;
             top: -5px;
@@ -125,41 +109,10 @@
             transform: translateX(-50%);
             width: 100px;
             height: 65px;
-            background-color: #ff98c8; /* Brighter pink hair */
+            background-color: #ff98c8;
             border: 4px solid #452103;
             border-radius: 50% 50% 40% 40%;
             z-index: 1;
-        }
-        
-        .hair-decoration {
-            position: absolute;
-            top: -8px;
-            left: 25px;
-            width: 30px;
-            height: 30px;
-            z-index: 3;
-        }
-        
-        .hair-flower {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: #ff5f5f;
-            border: 3px solid #452103;
-            border-radius: 50%;
-            z-index: 3;
-        }
-        
-        .hair-flower::before {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            width: 10px;
-            height: 10px;
-            background-color: #ffef9f;
-            border: 2px solid #452103;
-            border-radius: 50%;
         }
         
         .ponytail-left {
@@ -195,7 +148,7 @@
             transform: translateX(-50%);
             width: 100px;
             height: 80px;
-            background-color: #ff7f7f; /* Pink dress/top */
+            background-color: #ff7f7f;
             border: 4px solid #452103;
             border-radius: 40% 40% 0 0;
             z-index: 1;
@@ -206,7 +159,7 @@
             top: 150px;
             width: 20px;
             height: 60px;
-            background-color: #ffd59a; /* Skin tone matching face */
+            background-color: #ffd59a;
             border: 4px solid #452103;
             z-index: 0;
         }
@@ -226,7 +179,7 @@
             top: 220px;
             width: 20px;
             height: 60px;
-            background-color: #ffd59a; /* Skin tone */
+            background-color: #ffd59a;
             border: 4px solid #452103;
         }
         
@@ -245,7 +198,7 @@
             transform: translateX(-50%);
             width: 120px;
             height: 40px;
-            background-color: #c77dff; /* Brighter purple skirt */
+            background-color: #c77dff;
             border: 4px solid #452103;
             border-radius: 0 0 50% 50%;
             z-index: 2;
@@ -291,7 +244,6 @@
             z-index: 3;
         }
         
-        /* Interactive elements */
         .button {
             background-color: #7fac5c;
             color: #fff;
@@ -314,47 +266,25 @@
             box-shadow: 0 2px 0 #452103;
         }
         
-        .crops {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 40px;
+        .button-container {
             display: flex;
-            justify-content: space-around;
-            z-index: 1;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         
-        .crop {
-            width: 30px;
-            height: 40px;
-            position: relative;
-        }
-        
-        .crop-stem {
-            position: absolute;
-            bottom: 0;
+        .notification {
+            position: fixed;
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
-            width: 6px;
-            height: 20px;
-            background-color: #2e8b57;
-        }
-        
-        .crop-head {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 24px;
-            height: 24px;
-            background-color: #ff5555;
-            border-radius: 50%;
-            transition: transform 0.2s;
-        }
-        
-        .crop:hover .crop-head {
-            transform: translateX(-50%) scale(1.2);
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 4px solid #452103;
+            padding: 20px;
+            font-size: 24px;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
         }
         
         .speech-bubble {
@@ -385,197 +315,6 @@
             border-style: solid;
             border-color: white transparent transparent;
         }
-        
-        .rain {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.5s;
-            z-index: 0;
-        }
-        
-        .raindrop {
-            position: absolute;
-            width: 2px;
-            height: 15px;
-            background-color: #7fc2f4;
-            animation: fall linear infinite;
-        }
-        
-        @keyframes fall {
-            0% { transform: translateY(-100px); }
-            100% { transform: translateY(100vh); }
-        }
-        
-        .sun {
-            position: absolute;
-            top: 40px;
-            right: 40px;
-            width: 80px;
-            height: 80px;
-            background-color: #ffd700;
-            border: 4px solid #452103;
-            border-radius: 50%;
-            transition: transform 0.3s;
-            cursor: pointer;
-            z-index: 2;
-        }
-        
-        .sun:hover {
-            transform: scale(1.1);
-        }
-        
-        .daynight-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 60px;
-            height: 30px;
-            background-color: #7fc2f4;
-            border: 3px solid #452103;
-            border-radius: 15px;
-            cursor: pointer;
-            z-index: 10;
-        }
-        
-        .toggle-handle {
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            width: 20px;
-            height: 20px;
-            background-color: #ffd700;
-            border: 2px solid #452103;
-            border-radius: 50%;
-            transition: transform 0.3s;
-        }
-        
-        body.night {
-            background-color: #1a2c38;
-        }
-        
-        body.night .grass {
-            background-color: #3f5f36;
-        }
-        
-        .stars {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
-        
-        .star {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background-color: white;
-            border-radius: 50%;
-            animation: twinkle 2s infinite alternate;
-        }
-        
-        @keyframes twinkle {
-            0% { opacity: 0.2; }
-            100% { opacity: 1; }
-        }
-        
-        .particles-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 20;
-        }
-        
-        .particle {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: #fa4454;
-            border-radius: 50%;
-            opacity: 0;
-        }
-        
-        @keyframes particleFade {
-            0% { opacity: 1; transform: scale(1); }
-            100% { opacity: 0; transform: scale(0.5); }
-        }
-        
-        .notification {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(255, 255, 255, 0.9);
-            border: 4px solid #452103;
-            padding: 20px;
-            font-size: 24px;
-            z-index: 100;
-            opacity: 0;
-            transition: opacity 0.3s;
-            pointer-events: none;
-        }
-        
-        .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        /* Music control styles */
-        .music-control {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            z-index: 50;
-            display: flex;
-            align-items: center;
-            background-color: rgba(239, 213, 153, 0.8);
-            padding: 10px;
-            border: 4px solid #452103;
-            border-radius: 5px;
-        }
-        
-        .music-btn {
-            background-color: #7fac5c;
-            color: white;
-            border: 3px solid #452103;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            margin-right: 10px;
-            font-size: 18px;
-            transition: transform 0.1s;
-        }
-        
-        .music-btn:hover {
-            transform: scale(1.1);
-        }
-        
-        .music-btn:active {
-            transform: scale(0.95);
-        }
-        
-        .volume-control {
-            width: 80px;
-        }
-        
-        .volume-control input {
-            width: 100%;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
@@ -586,29 +325,14 @@
         <div class="button-container">
             <button class="button" id="ace-button">GET ACE</button>
             <button class="button" id="dance-button">DANCE</button>
-            <button class="button" id="rain-button">MAKE IT RAIN</button>
-            <button class="button" id="music-toggle">PLAY MUSIC</button>
+            <button class="button" id="show-message">SHOW MESSAGE</button>
         </div>
-    </div>
-    
-    <div class="music-control">
-        <div class="music-btn" id="music-play-pause">▶</div>
-        <div class="volume-control">
-            <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
-        </div>
-    </div>
-    
-    <div class="daynight-toggle" id="daynight-toggle">
-        <div class="toggle-handle" id="toggle-handle"></div>
     </div>
     
     <div class="character">
         <div class="farmer" id="farmer">
             <div class="head">
                 <div class="hair"></div>
-                <div class="hair-decoration">
-                    <div class="hair-flower"></div>
-                </div>
                 <div class="ponytail-left"></div>
                 <div class="ponytail-right"></div>
                 <div class="eyes">
@@ -632,328 +356,51 @@
         </div>
     </div>
     
-    <div class="crops">
-        <div class="crop">
-            <div class="crop-stem"></div>
-            <div class="crop-head"></div>
-        </div>
-        <div class="crop">
-            <div class="crop-stem"></div>
-            <div class="crop-head"></div>
-        </div>
-        <div class="crop">
-            <div class="crop-stem"></div>
-            <div class="crop-head"></div>
-        </div>
-        <div class="crop">
-            <div class="crop-stem"></div>
-            <div class="crop-head"></div>
-        </div>
-        <div class="crop">
-            <div class="crop-stem"></div>
-            <div class="crop-head"></div>
-        </div>
-    </div>
-    
-    <div class="sun" id="sun"></div>
-    <div class="rain" id="rain"></div>
-    <div class="stars" id="stars"></div>
-    <div class="particles-container" id="particles"></div>
     <div class="notification" id="notification">ACE!</div>
     
-    <!-- Audio elements -->
-    <audio id="background-music" loop>
-        <!-- This is a free track from cdnjs that should work -->
-        <source src="https://cdnjs.cloudflare.com/ajax/libs/ion-sound/3.0.7/sounds/bell_ring.mp3" type="audio/mpeg">
-    </audio>
-    
-    <audio id="ace-sound">
-        <source src="https://cdnjs.cloudflare.com/ajax/libs/ion-sound/3.0.7/sounds/metal_plate.mp3" type="audio/mpeg">
-    </audio>
-    
-    <audio id="click-sound">
-        <source src="https://cdnjs.cloudflare.com/ajax/libs/ion-sound/3.0.7/sounds/button_click.mp3" type="audio/mpeg">
-    </audio>
-    
-    <audio id="headshot-sound">
-        <source src="https://cdnjs.cloudflare.com/ajax/libs/ion-sound/3.0.7/sounds/water_droplet.mp3" type="audio/mpeg">
-    </audio>
-    
     <script>
-        // DOM Elements
-        const farmer = document.getElementById('farmer');
-        const speech = document.getElementById('speech');
-        const rain = document.getElementById('rain');
-        const stars = document.getElementById('stars');
-        const sun = document.getElementById('sun');
-        const toggleHandle = document.getElementById('toggle-handle');
-        const particles = document.getElementById('particles');
-        const notification = document.getElementById('notification');
-        const gun = document.getElementById('gun');
-        
-        // Audio elements
-        const backgroundMusic = document.getElementById('background-music');
-        const aceSound = document.getElementById('ace-sound');
-        const clickSound = document.getElementById('click-sound');
-        const headshotSound = document.getElementById('headshot-sound');
-        const musicPlayPause = document.getElementById('music-play-pause');
-        const volumeSlider = document.getElementById('volume-slider');
-        
-        // Background music settings
-        backgroundMusic.volume = 0.5;
-        let musicPlaying = false;
-        
-        // Music play/pause control
-        musicPlayPause.addEventListener('click', () => {
-            if (musicPlaying) {
-                backgroundMusic.pause();
-                musicPlayPause.innerHTML = "▶";
-                musicPlaying = false;
-            } else {
-                backgroundMusic.play().catch(e => {
-                    console.log("Audio play failed:", e);
-                    showNotification("Click anywhere to enable audio!");
-                });
-                musicPlayPause.innerHTML = "⏸";
-                musicPlaying = true;
-            }
-        });
-        
-        // Volume control
-        volumeSlider.addEventListener('input', () => {
-            backgroundMusic.volume = volumeSlider.value;
-        });
-        
-        // Music toggle button in main interface
-        document.getElementById('music-toggle').addEventListener('click', () => {
-            musicPlayPause.click();
-        });
-        
-        // Enable audio on first interaction
-        document.addEventListener('click', () => {
-            if (!musicPlaying && document.getElementById('music-toggle').classList.contains('active')) {
-                backgroundMusic.play().catch(e => console.log("Audio play failed:", e));
-                musicPlayPause.innerHTML = "⏸";
-                musicPlaying = true;
-            }
-        }, { once: true });
-        
-        // Speech bubble messages
-        const speeches = ["Headshot!", "buzzlightyear1 is unstoppable!", "Watch this!", "GG!", "Ace incoming!", "Radiant skills!"];
-        
-        // Create stars
-        for (let i = 0; i < 50; i++) {
-            const star = document.createElement('div');
-            star.classList.add('star');
-            star.style.top = Math.random() * 100 + '%';
-            star.style.left = Math.random() * 100 + '%';
-            star.style.animationDelay = Math.random() * 2 + 's';
-            stars.appendChild(star);
-        }
-        
-        // Create raindrops
-        for (let i = 0; i < 100; i++) {
-            const raindrop = document.createElement('div');
-            raindrop.classList.add('raindrop');
-            raindrop.style.left = Math.random() * 100 + '%';
-            raindrop.style.animationDuration = Math.random() * 0.5 + 0.5 + 's';
-            raindrop.style.animationDelay = Math.random() * 2 + 's';
-            rain.appendChild(raindrop);
-        }
-        
-        // Sound effects
-        function playSound(sound) {
-            // Reset the sound to beginning
-            sound.currentTime = 0;
-            sound.play().catch(e => console.log("Audio play failed:", e));
-        }
-        
-        // Dance button
-        document.getElementById('dance-button').addEventListener('click', () => {
-            playSound(clickSound);
+        // Very simple script with minimal features
+        document.getElementById('ace-button').addEventListener('click', function() {
+            var notification = document.getElementById('notification');
+            notification.textContent = "ACE!";
+            notification.style.opacity = '1';
             
+            setTimeout(function() {
+                notification.style.opacity = '0';
+            }, 2000);
+        });
+        
+        document.getElementById('dance-button').addEventListener('click', function() {
+            var farmer = document.getElementById('farmer');
             farmer.style.animation = 'none';
             void farmer.offsetWidth; // Trigger reflow
             farmer.style.animation = 'dance 0.5s infinite alternate';
             
-            // Random speech
-            showSpeech();
-            
-            // Reset after dance
-            setTimeout(() => {
+            setTimeout(function() {
                 farmer.style.animation = 'none';
             }, 3000);
         });
         
-        // Rain button
-        document.getElementById('rain-button').addEventListener('click', () => {
-            playSound(clickSound);
-            
-            if (rain.style.opacity === '1') {
-                rain.style.opacity = '0';
-            } else {
-                rain.style.opacity = '1';
-                showSpeech("It's raining!");
-            }
-        });
-        
-        // ACE button
-        document.getElementById('ace-button').addEventListener('click', () => {
-            // Play sound
-            playSound(aceSound);
-            
-            // Show notification
-            notification.textContent = "ACE!";
-            notification.style.opacity = '1';
-            
-            // Create particles
-            createParticles();
-            
-            // Random speech
-            showSpeech("I got an ACE!");
-            
-            // Gun animation
-            gun.style.animation = 'none';
-            void gun.offsetWidth; // Trigger reflow
-            gun.style.animation = 'shoot 0.2s 5';
-            
-            // Hide notification after delay
-            setTimeout(() => {
-                notification.style.opacity = '0';
-            }, 2000);
-        });
-        
-        // Day/Night toggle
-        document.getElementById('daynight-toggle').addEventListener('click', () => {
-            playSound(clickSound);
-            
-            document.body.classList.toggle('night');
-            
-            if (document.body.classList.contains('night')) {
-                toggleHandle.style.transform = 'translateX(30px)';
-                toggleHandle.style.backgroundColor = '#ccc';
-                stars.style.opacity = '1';
-                sun.style.opacity = '0';
-            } else {
-                toggleHandle.style.transform = 'translateX(0)';
-                toggleHandle.style.backgroundColor = '#ffd700';
-                stars.style.opacity = '0';
-                sun.style.opacity = '1';
-            }
-        });
-        
-        // Show speech bubble with text
-        function showSpeech(text) {
-            playSound(headshotSound);
-            
-            if (!text) {
-                text = speeches[Math.floor(Math.random() * speeches.length)];
-            }
-            
-            speech.textContent = text;
+        document.getElementById('show-message').addEventListener('click', function() {
+            var speech = document.getElementById('speech');
+            var messages = ["Headshot!", "buzzlightyear1 is unstoppable!", "Watch this!", "GG!", "Ace incoming!", "Radiant skills!"];
+            speech.textContent = messages[Math.floor(Math.random() * messages.length)];
             speech.style.opacity = '1';
             
-            setTimeout(() => {
+            setTimeout(function() {
                 speech.style.opacity = '0';
             }, 2000);
-        }
+        });
         
-        // Show notification with text
-        function showNotification(text) {
-            notification.textContent = text;
-            notification.style.opacity = '1';
-            
-            setTimeout(() => {
-                notification.style.opacity = '0';
-            }, 3000);
-        }
-        
-        // Create particles effect
-        function createParticles() {
-            for (let i = 0; i < 30; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
-                // Random position around character
-                const x = 50 + (Math.random() - 0.5) * 100;
-                const y = 50 + (Math.random() - 0.5) * 100;
-                
-                particle.style.left = x + '%';
-                particle.style.top = y + '%';
-                particle.style.backgroundColor = `hsl(${Math.random() * 30 + 350}, 100%, 50%)`;
-                particle.style.animation = `particleFade ${Math.random() * 0.5 + 0.5}s forwards`;
-                
-                particles.appendChild(particle);
-                
-                // Remove particle after animation
-                setTimeout(() => {
-                    particle.remove();
-                }, 1000);
-            }
-        }
-        
-        // Add animation for gun and character
+        // Add animation for dancing
         document.head.insertAdjacentHTML('beforeend', `
             <style>
                 @keyframes dance {
                     0% { transform: translateY(0) rotate(0deg); }
                     100% { transform: translateY(-10px) rotate(5deg); }
                 }
-                
-                @keyframes shoot {
-                    0% { transform: rotate(-15deg) translateY(0); }
-                    50% { transform: rotate(-15deg) translateY(-5px); }
-                    100% { transform: rotate(-15deg) translateY(0); }
-                }
-                
-                @keyframes blink {
-                    0% { transform: scaleY(1); }
-                    20% { transform: scaleY(0.1); }
-                    40% { transform: scaleY(1); }
-                }
             </style>
         `);
-        
-        // Make crops interactive
-        const crops = document.querySelectorAll('.crop');
-        crops.forEach(crop => {
-            crop.addEventListener('click', () => {
-                playSound(clickSound);
-                const cropHead = crop.querySelector('.crop-head');
-                cropHead.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 60%)`;
-            });
-        });
-        
-        // Make sun interactive
-        sun.addEventListener('click', () => {
-            playSound(clickSound);
-            
-            sun.style.transform = 'scale(1.2)';
-            setTimeout(() => {
-                sun.style.transform = 'scale(1)';
-            }, 300);
-            
-            showSpeech("Sunny day!");
-        });
-        
-        // Add occasional eye blinking
-        function blinkEyes() {
-            const eyes = document.querySelectorAll('.eye');
-            eyes.forEach(eye => {
-                eye.style.animation = 'blink 0.3s';
-                setTimeout(() => {
-                    eye.style.animation = '';
-                }, 300);
-            });
-            
-            // Schedule next blink
-            setTimeout(blinkEyes, Math.random() * 5000 + 2000);
-        }
-        
-        // Start blinking
-        setTimeout(blinkEyes, 2000);
-        
-        // Show initial instruction
-        setTimeout(() => {
-            showNotification("Click buttons to interact!");
-        }, 1000);
+    </script>
+</body>
+</html>
